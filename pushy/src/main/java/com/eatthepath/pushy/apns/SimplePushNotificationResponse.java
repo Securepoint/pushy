@@ -64,8 +64,8 @@ class SimplePushNotificationResponse<T extends ApnsPushNotification> implements 
     }
 
     @Override
-    public String getRejectionReason() {
-        return this.rejectionReason;
+    public Optional<String> getRejectionReason() {
+        return Optional.ofNullable(this.rejectionReason);
     }
 
     @Override
